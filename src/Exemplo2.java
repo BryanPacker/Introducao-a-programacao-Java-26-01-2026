@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exemplo2 {
@@ -69,6 +70,8 @@ public class Exemplo2 {
         System.out.println("Digite a nota do trabalho 7: ");
         trabalhoun7 = terminal.nextFloat();
 
+        terminal.close();
+        
         // Cálculos de Média Aritmética / Ponderada
         float mediaTrabalhos = (trabalhoun1 + trabalhoun2 + trabalhoun3 + trabalhoun4 + trabalhoun5 + trabalhoun6 + trabalhoun7) / 7;
         float mediaFinal = (prova1 * 0.2f) + (prova2 * 0.3f) + (trabalhoFinal * 0.3f) + (mediaTrabalhos * 0.2f);
@@ -78,14 +81,15 @@ public class Exemplo2 {
         float provaFormat = new BigDecimal(provas).setScale(2, RoundingMode.HALF_UP).floatValue();
         float tFFormat = new BigDecimal(trabalhoFinal).setScale(2, RoundingMode.HALF_UP).floatValue();
         float mFFormat = new BigDecimal(mediaFinal).setScale(2, RoundingMode.HALF_UP).floatValue();
-
+        DecimalFormat df = new DecimalFormat("0.00");
         // Médias Aluno
         System.out.println("A média final dos trabalhos é igual a: " + mTFormat);
         System.out.println("A média final das provas é igual a: " + provaFormat);
         System.out.println("A média final do trabalho final é igual a: " + tFFormat);
         System.out.println("A média final do semestre é igual a: " + mFFormat);
         System.out.println("A média final do semestre é igual a: " + mediaFinal);
-        System.out.printf("A média final do semestre é igual a: %.2f%n", mediaFinal);
+        System.out.printf("A média final do semestre é igual a: %.2f%n", mediaFinal,"%n");
+        System.out.printf("A média final do semestre é igual a: " +  df.format(mediaFinal));
 
         if (mFFormat < 6) {
             System.out.println("Reprovado");
