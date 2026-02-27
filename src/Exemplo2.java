@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class Exemplo2 {
@@ -5,34 +7,36 @@ public class Exemplo2 {
         System.out.println("Aula 25/02/2026");
 
         // Váriaveis
-        //float prova1 = 0f;
-        //float prova2 = 0f;
-        //float trabalhoFinal = 0f;
+        // float prova1 = 0f;
+        // float prova2 = 0f;
+        // float trabalhoFinal = 0f;
 
         // Cálculos de Média Aritmética / Ponderada
-        //float mediaTrabalhos = (10 + 8.5f + 0 + 5 + 10 + 9.8f + 9.5f) / 7;
-        //float mediaFinal = (prova1 * 0.2f) + (prova2 * 0.3f) + (trabalhoFinal * 0.3f) + (mediaTrabalhos * 0.2f);
+        // float mediaTrabalhos = (10 + 8.5f + 0 + 5 + 10 + 9.8f + 9.5f) / 7;
+        // float mediaFinal = (prova1 * 0.2f) + (prova2 * 0.3f) + (trabalhoFinal * 0.3f)
+        // + (mediaTrabalhos * 0.2f);
 
         // Médias Aluno
-        //System.out.println("A média final do semestre é igual a: " + mediaFinal);
-        //System.out.println("A média final dos trabalhos é igual a: " + mediaTrabalhos);
+        // System.out.println("A média final do semestre é igual a: " + mediaFinal);
+        // System.out.println("A média final dos trabalhos é igual a: " +
+        // mediaTrabalhos);
 
         // Váriaveis prova
         float prova1;
         float prova2;
         float trabalhoFinal;
 
-        Scanner terminalpv1 = new Scanner(System.in);
+        Scanner terminal = new Scanner(System.in);
+
+        // Inputs
         System.out.println("Digite a nota da prova 1: ");
-        prova1 = terminalpv1.nextFloat();
+        prova1 = terminal.nextFloat();
 
-        Scanner terminalpv2 = new Scanner(System.in);
         System.out.println("Digite a nota da prova 2: ");
-        prova2 = terminalpv2.nextFloat();
+        prova2 = terminal.nextFloat();
 
-        Scanner terminalTf = new Scanner(System.in);
         System.out.println("Digite a nota do Trabalho Final: ");
-        trabalhoFinal = terminalTf.nextFloat();
+        trabalhoFinal = terminal.nextFloat();
 
         // Váriaveis trabalhos
         float trabalhoun1;
@@ -43,40 +47,51 @@ public class Exemplo2 {
         float trabalhoun6;
         float trabalhoun7;
 
-        Scanner terminalT1 = new Scanner(System.in);
-        System.out.println("Digite a nota do prova 1: ");
-        trabalhoun1 = terminalpv1.nextFloat();
-        
-        Scanner terminalT2 = new Scanner(System.in);
+        // Inputs
+        System.out.println("Digite a nota do trabalho 1: ");
+        trabalhoun1 = terminal.nextFloat();
+
         System.out.println("Digite a nota do trabalho 2: ");
-        trabalhoun2 = terminalT2.nextFloat();
+        trabalhoun2 = terminal.nextFloat();
 
-        Scanner terminalT3 = new Scanner(System.in);
         System.out.println("Digite a nota do trabalho 3: ");
-        trabalhoun3 = terminalT3.nextFloat();
+        trabalhoun3 = terminal.nextFloat();
 
-        Scanner terminalT4 = new Scanner(System.in);
         System.out.println("Digite a nota do trabalho 4: ");
-        trabalhoun4 = terminalT4.nextFloat();
+        trabalhoun4 = terminal.nextFloat();
 
-        Scanner terminalT5 = new Scanner(System.in);
         System.out.println("Digite a nota do trabalho 5: ");
-        trabalhoun5 = terminalT5.nextFloat();
+        trabalhoun5 = terminal.nextFloat();
 
-        Scanner terminalT6 = new Scanner(System.in);
         System.out.println("Digite a nota do trabalho 6: ");
-        trabalhoun6 = terminalT6.nextFloat();
+        trabalhoun6 = terminal.nextFloat();
 
-        Scanner terminalT7 = new Scanner(System.in);
         System.out.println("Digite a nota do trabalho 7: ");
-        trabalhoun7 = terminalT7.nextFloat();
+        trabalhoun7 = terminal.nextFloat();
 
         // Cálculos de Média Aritmética / Ponderada
         float mediaTrabalhos = (trabalhoun1 + trabalhoun2 + trabalhoun3 + trabalhoun4 + trabalhoun5 + trabalhoun6 + trabalhoun7) / 7;
         float mediaFinal = (prova1 * 0.2f) + (prova2 * 0.3f) + (trabalhoFinal * 0.3f) + (mediaTrabalhos * 0.2f);
+        float provas = (prova1 + prova2) / 2;
+
+        float mTFormat = new BigDecimal(mediaTrabalhos).setScale(2, RoundingMode.HALF_UP).floatValue();
+        float provaFormat = new BigDecimal(provas).setScale(2, RoundingMode.HALF_UP).floatValue();
+        float tFFormat = new BigDecimal(trabalhoFinal).setScale(2, RoundingMode.HALF_UP).floatValue();
+        float mFFormat = new BigDecimal(mediaFinal).setScale(2, RoundingMode.HALF_UP).floatValue();
 
         // Médias Aluno
+        System.out.println("A média final dos trabalhos é igual a: " + mTFormat);
+        System.out.println("A média final das provas é igual a: " + provaFormat);
+        System.out.println("A média final do trabalho final é igual a: " + tFFormat);
+        System.out.println("A média final do semestre é igual a: " + mFFormat);
         System.out.println("A média final do semestre é igual a: " + mediaFinal);
-        System.out.println("A média final dos trabalhos é igual a: " + mediaTrabalhos);
+        System.out.printf("A média final do semestre é igual a: %.2f%n", mediaFinal);
+
+        if (mFFormat < 6) {
+            System.out.println("Reprovado");
+        }
+        else {
+            System.out.println("Aprovado");
+        }
     }
 }
