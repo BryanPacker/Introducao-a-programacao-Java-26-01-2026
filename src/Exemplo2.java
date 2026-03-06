@@ -88,7 +88,7 @@ public class Exemplo2 {
         System.out.println("A média final do trabalho final é igual a: " + tFFormat);
         System.out.println("A média final do semestre é igual a: " + mFFormat);
         System.out.println("A média final do semestre é igual a: " + mediaFinal);
-        System.out.printf("A média final do semestre é igual a: %.2f%n", mediaFinal,"%n");
+        System.out.printf("A média final do semestre é igual a: %.2f%n", mediaFinal,"");
         System.out.printf("A média final do semestre é igual a: " +  df.format(mediaFinal));
 
         if (mFFormat < 6) {
