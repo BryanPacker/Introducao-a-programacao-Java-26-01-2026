@@ -17,6 +17,8 @@ public class Uni2Exe12 {
         System.out.print("Qual o valor do segundo ponto de 'Y'? ");
         y2 = prompt.nextDouble();
 
+        prompt.close();
+        
         double distancia, xFinal, yFinal, preRaiz; 
         distancia  = (x1 - x2);
         xFinal = Math.pow(distancia, 2);

@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 public class Uni2Exe11 {
     public static void main(String[] args) {
+        
         double a, b, c;
         Scanner prompt = new Scanner(System.in);
+        
         System.out.println("Qual o valor de A? ");
         a = prompt.nextDouble();
         System.out.println("Qual o valor de B? ");
         b = prompt.nextDouble();
         System.out.println("Qual o valor de C? ");
         c = prompt.nextDouble();
+        
         prompt.close();
 
         double area, circulo, javaPI, trapezio, quadrado, retangulo;

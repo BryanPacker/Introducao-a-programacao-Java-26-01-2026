@@ -23,6 +23,8 @@ public class Uni2Exe08 {
         System.out.print("Qual o valor da segunda peça? ");
         valorPeca2 = prompt.nextInt();
 
+        prompt.close();
+        
         valorTotal = (valorPeca * numeroPeca) * (valorPeca2 * numeroPeca2);
         System.out.printf("O valor total das suas compras é de: %.2f", valorTotal);
         

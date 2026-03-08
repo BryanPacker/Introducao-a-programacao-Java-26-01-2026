@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class Uni2Exe13 {
     public static void main(String[] args) {
+
         float kmDistancia, tmpDistancia;
         Scanner prompt = new Scanner(System.in);
+        
         System.out.println("Quantos Km's você quer calcular?");
         kmDistancia = prompt.nextFloat();
+        
         prompt.close();
+       
         tmpDistancia = kmDistancia * 2;
+       
         System.out.println("O carro y vai demorar um total de: " + tmpDistancia + " minutos para essa distância do outro carro");
 
     }

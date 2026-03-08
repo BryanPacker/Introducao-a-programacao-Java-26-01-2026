@@ -4,35 +4,45 @@ import java.util.Scanner;
 
 public class Uni2Exe14 {
     public static void main(String[] args) {
-        int valor; 
+
+        int valor, resto; 
         Scanner prompt = new Scanner(System.in);
+        
         System.out.println("Qual o valor a ser decomposto?");
         valor = prompt.nextInt();
+
         prompt.close();
-        ced100 = valor / 100;
-        resto = ced100 % 100;
-        ced50 = valor / 50;
-        resto = ced50 % 50;
-        ced20 = valor / 20;
-        resto = ced20 % 20;
-        ced10 = valor / 10;
-        resto = ced10 % 10;
-        ced5 = valor / 5;
-        resto = ced5 % 5;
-        ced2 = valor / 2;
-        resto = ced100 % 100;
-        ced1 = valor / 1;
-        resto = ced100 % 1;
-
-        System.out.printf("A decomposição do valor igual a %.2d em notas de cem reais é igual a %d%n", valor);
-        System.out.printf("A decomposição do valor igual a %.2d em notas de cinquenta reais é igual a %d%n", valor);
-        System.out.printf("A decomposição do valor igual a %.2d em notas de vinte reais é igual a %d%n", valor);
-        System.out.printf("A decomposição do valor igual a %.2d em notas de dez reais é igual a %d%n", valor);
-        System.out.printf("A decomposição do valor igual a %.2d em notas de cinco reais é igual a %d%n", valor);
-        System.out.printf("A decomposição do valor igual a %.2d em notas de dois reais é igual a %d%n", valor);
-        System.out.printf("A decomposição do valor igual a %.2d em moedas de um real é igual a %d%n", valor);
-
-
+       
+        System.out.println("A decomposição de R$" + valor + " é igual ao seguinte valor: ");
+    
+        resto = valor / 100;
+        valor = valor % 100; 
+        System.out.println( resto + " Notas de 100");
+    
+        resto = valor / 50;
+        valor = valor % 50; 
+        System.out.println(resto + " Notas de 50");
+    
+        resto = valor / 20;
+        valor = valor % 20;
+        System.out.println(resto + " Notas de 20");
+    
+        resto = valor / 10;
+        valor = valor % 10;
+        System.out.println(resto + " Notas de 10");
+    
+        resto = valor / 5;
+        valor = valor % 5;
+        System.out.println(resto + " Notas de 5");
+    
+        resto = valor / 2;
+        valor = valor % 2;
+        System.out.println(resto + " Notas de 2");
+    
+        resto = valor / 1;
+        valor = valor % 1;
+        System.out.println(resto + " Em moedas de 1 Real");
+        
     }
 }
 /*Leia um valor inteiro. A seguir, calcule o menor número de notas possíveis (cédulas) no qual o valor pode ser decomposto. As notas consideradas são de
