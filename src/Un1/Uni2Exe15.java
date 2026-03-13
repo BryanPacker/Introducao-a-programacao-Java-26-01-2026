@@ -11,6 +11,7 @@ public class Uni2Exe15 {
 
         prompt.close();
 
+        // resposta com ajuda de IA, não consegui descobrir como fazer
         int valor = (int) Math.round(entrada * 100);
 
         System.out.printf("A decomposição de R$%.2f é igual a: %n", entrada);
