@@ -17,10 +17,10 @@ public class Uni4Exe01 {
         return this.valorHora * this.horasTrabalhadas;
     }
     public float valorSalarioHoraExtra(){
-        return (this.valorHora * 1.5f) * horasExtras;
+        return (this.valorHora * 1.5f) * this.horasExtras;
     }
     public float valorSalarioFinalCHora(){
-        return this.valorSalarioNormal() * this.valorSalarioHoraExtra();
+        return this.valorSalarioNormal() + this.valorSalarioHoraExtra();
     }
     public static void main(String[] args) {
         Scanner prompt = new Scanner(System.in);
@@ -28,15 +28,16 @@ public class Uni4Exe01 {
 
         System.out.println("Qual seu ganho por hora");
         valorHora = prompt.nextFloat();
-        System.out.println("Quantas horas foram trabalhadas na semana");
+        System.out.println("Quantas horas foram trabalhadas no mês");
         horasTrabalhadas = prompt.nextFloat();
         prompt.close();
-        if (horasTrabalhadas > 40) {
-            horasExtras = horasTrabalhadas - 40;
+        if (horasTrabalhadas > 160) {
+            horasExtras = horasTrabalhadas - 160;
+            horasTrabalhadas = horasTrabalhadas - horasExtras;
         }
 
         Uni4Exe01 exe01 = new Uni4Exe01(valorHora, horasTrabalhadas, horasExtras);
-        if (horasTrabalhadas > 40) {
+        if (horasTrabalhadas >= 160) {
             System.out.printf("Você ganhara essa semana %.2f reais por seu trabalho", exe01.valorSalarioFinalCHora() );
         }
         else{
