@@ -23,7 +23,8 @@ public class Uni4Exe18 {
         }
         else {
             pag = pag - venc;
-            prestvalor = pag * 1.2f * prestvalor;
+            prestvalor = pag * 0.02f * prestvalor + prestvalor;
+            System.out.printf("O pagamento está atrasado %.0f",prestvalor);
         }
     }
 }
