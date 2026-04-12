@@ -18,13 +18,13 @@ public class Uni4Exe18 {
             valorD = prestvalor * 0.9f;
             System.out.println(" O valor total pago foi de " + valorD + " e o pagamento está em dia");
         }
-        if (pag > 0 && (pag > venc && pag <= (venc + 5))) {
+        else if(pag > 0 && (pag > venc && pag <= (venc + 5))) {
             System.out.println("Você pagou o valor cheio!");
         }
         else {
             pag = pag - venc;
             prestvalor = pag * 0.02f * prestvalor + prestvalor;
-            System.out.printf("O pagamento está atrasado %.0f",prestvalor);
+            System.out.printf("O pagamento está atrasado R$%.0f",prestvalor);
         }
     }
 }
