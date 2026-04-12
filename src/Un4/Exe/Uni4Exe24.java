@@ -19,21 +19,121 @@ public class Uni4Exe24 {
 
         switch (numChoose) {
             case 1:
-                if (num1 > num2 && num1 > num3 && num2 < num1 && num2  > num3) {
-                   System.out.println("A ordem é igual a");
-                   System.out.println(num1);
-                   System.out.println(num2);
-                   System.out.println(num3);
-                }                
-                else if (num2 > num1 && num2 > num3 && num3 < num1 && num2  > num3) {
-                    System.out.println("A ordem é igual a");
+                if(num1 < num3 && num1 < num2 && num2 < num3 ){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num1);
+                    System.out.println(num2);
+                    System.out.println(num3);
+                }
+                if(num1 < num3 && num1 < num2 && num2 > num3 ){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num1);
+                    System.out.println(num3);
+                    System.out.println(num2);
+                }
+                else if(num2 < num1 && num2  < num3 && num1 < num3){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num2);
+                    System.out.println(num1);
+                    System.out.println(num3);
+                }
+                else if(num2 < num1 && num2  < num3 && num1 > num3){
+                    System.out.println("A ordem dos números é igual a:");
                     System.out.println(num2);
                     System.out.println(num3);
                     System.out.println(num1);
                 }
-                break;
-        
+                else if(num3 < num1 && num3  < num2 && num1 < num2){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num3);
+                    System.out.println(num1);
+                    System.out.println(num2);
+                }
+                else if(num3 < num1 && num3  < num2 && num1 > num2){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num3);
+                    System.out.println(num2);
+                    System.out.println(num1);
+                }
+                    break;
+            case 2:
+                if(num1 < num3 && num1 < num2 && num2 < num3 ){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num3);
+                    System.out.println(num2);
+                    System.out.println(num1);
+                }
+                if(num1 < num3 && num1 < num2 && num2 > num3 ){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num2);
+                    System.out.println(num3);
+                    System.out.println(num1);
+                }
+                else if(num2 < num1 && num2  < num3 && num1 < num3){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num3);
+                    System.out.println(num1);
+                    System.out.println(num2);
+                }
+                else if(num2 < num1 && num2  < num3 && num1 > num3){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num1);
+                    System.out.println(num3);
+                    System.out.println(num2);
+                }
+                else if(num3 < num1 && num3  < num2 && num1 < num2){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num2);
+                    System.out.println(num1);
+                    System.out.println(num3);
+                }
+                else if(num3 < num1 && num3  < num2 && num1 > num2){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num1);
+                    System.out.println(num2);
+                    System.out.println(num3);
+                }
+                    break;
+            case 3:
+                if(num1 < num3 && num1 < num2 && num2 < num3 ){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num1);
+                    System.out.println(num3);
+                    System.out.println(num2);
+                }
+                if(num1 < num3 && num1 < num2 && num2 > num3 ){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num1);
+                    System.out.println(num2);
+                    System.out.println(num3);
+                }
+                else if(num2 < num1 && num2  < num3 && num1 < num3){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num2);
+                    System.out.println(num3);
+                    System.out.println(num1);
+                }
+                else if(num2 < num1 && num2  < num3 && num1 > num3){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num2);
+                    System.out.println(num1);
+                    System.out.println(num3);
+                }
+                else if(num3 < num1 && num3  < num2 && num1 < num2){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num3);
+                    System.out.println(num2);
+                    System.out.println(num1);
+                }
+                else if(num3 < num1 && num3  < num2 && num1 > num2){
+                    System.out.println("A ordem dos números é igual a:");
+                    System.out.println(num3);
+                    System.out.println(num1);
+                    System.out.println(num2);
+                }
+                    break;
             default:
+                System.out.println("Números inválidos");
                 break;
         }
     }
