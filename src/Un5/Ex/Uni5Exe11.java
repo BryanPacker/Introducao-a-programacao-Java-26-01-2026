@@ -10,7 +10,8 @@ public class Uni5Exe11 {
         int h1 = 1, h2 = 3;
         for (int i = 1; i <= numHoras; i++) {
             if (i > 2) {
-                h2 = h2 + (h2*3);
+                h2 = (h2*3);
+                h1 += h2;
             }
         }
         if (numHoras == 1) {
@@ -20,7 +21,8 @@ public class Uni5Exe11 {
             System.out.println("A máquina quebrou somente 3 biscoitos");                    
         }
         else {
-            System.out.println("A máquina quebrou " + h2 + " biscoitos");
+            h1 += 3;
+            System.out.println("A máquina quebrou " + h1 + " biscoitos");
         }
     }
 }
